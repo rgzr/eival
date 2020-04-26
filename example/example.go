@@ -189,7 +189,7 @@ func main() {
 			for _, value := range vals {
 				if reader == TIME {
 					if value.Ok {
-						t, _ := value.V.(time.Time)
+						//t, _ := value.V.(time.Time)
 						s = append(s, fmt.Sprintf("R(time.Date(%d, %d, %d, %d, %d, %d, %d, loc *Location),%t)", types[reader], value.V, value.Ok))
 					} else {
 						s = append(s, fmt.Sprintf("R(%#v,%t)", value.V, value.Ok))
